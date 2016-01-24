@@ -1,0 +1,636 @@
+2016-01-24 12:21:00,922 INFO  io.prediction.tools.console.App$ [main] -                 Name |   ID |                                                       Access Key | Allowed Event(s)
+2016-01-24 12:21:00,969 INFO  io.prediction.tools.console.App$ [main] -                 test |    1 | Xt1V7WxGvUwxTFB2mbMzxDIBQKlNgZ4u5J6yhcbsBjQAtDomx45n3KdSXxxPPfw0 | (all)
+2016-01-24 12:21:00,969 INFO  io.prediction.tools.console.App$ [main] - Finished listing 1 app(s).
+2016-01-24 12:22:43,352 INFO  io.prediction.tools.console.Console$ [main] - Inspecting PredictionIO...
+2016-01-24 12:22:43,356 INFO  io.prediction.tools.console.Console$ [main] - PredictionIO 0.9.5 is installed at /Users/byeondongnam/PredictionIO
+2016-01-24 12:22:43,356 INFO  io.prediction.tools.console.Console$ [main] - Inspecting Apache Spark...
+2016-01-24 12:22:43,367 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark is installed at /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1
+2016-01-24 12:22:43,407 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark 1.5.1 detected (meets minimum requirement of 1.3.0)
+2016-01-24 12:22:43,407 INFO  io.prediction.tools.console.Console$ [main] - Inspecting storage backend connections...
+2016-01-24 12:22:43,426 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Meta Data Backend (Source: ELASTICSEARCH)...
+2016-01-24 12:22:44,530 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Model Data Backend (Source: LOCALFS)...
+2016-01-24 12:22:44,534 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Event Data Backend (Source: HBASE)...
+2016-01-24 12:22:45,325 INFO  io.prediction.data.storage.Storage$ [main] - Test writing to Event Store (App Id 0)...
+2016-01-24 12:22:45,576 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_0 doesn't exist yet. Creating now...
+2016-01-24 12:22:46,087 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_0...
+2016-01-24 12:22:47,485 INFO  io.prediction.tools.console.Console$ [main] - (sleeping 5 seconds for all messages to show up...)
+2016-01-24 12:22:52,488 INFO  io.prediction.tools.console.Console$ [main] - Your system is all ready to go.
+2016-01-24 12:23:07,176 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_2 doesn't exist yet. Creating now...
+2016-01-24 12:23:07,448 INFO  io.prediction.tools.console.App$ [main] - Initialized Event Store for this app ID: 2.
+2016-01-24 12:23:07,464 INFO  io.prediction.tools.console.App$ [main] - Created new app:
+2016-01-24 12:23:07,464 INFO  io.prediction.tools.console.App$ [main] -       Name: test2
+2016-01-24 12:23:07,464 INFO  io.prediction.tools.console.App$ [main] -         ID: 2
+2016-01-24 12:23:07,465 INFO  io.prediction.tools.console.App$ [main] - Access Key: G1tTRAo957LTpIZR9y2uviAPmmPvw8doPFiSpohT9KTCsAGtV6Rjp2qdVPJKDStE
+2016-01-24 12:27:16,243 INFO  io.prediction.tools.console.Console$ [main] - Using command '/Users/byeondongnam/PredictionIO/sbt/sbt' at the current working directory to build.
+2016-01-24 12:27:16,244 INFO  io.prediction.tools.console.Console$ [main] - If the path above is incorrect, this process will fail.
+2016-01-24 12:27:16,245 INFO  io.prediction.tools.console.Console$ [main] - Uber JAR disabled. Making sure lib/pio-assembly-0.9.5.jar is absent.
+2016-01-24 12:27:16,245 INFO  io.prediction.tools.console.Console$ [main] - Going to run: /Users/byeondongnam/PredictionIO/sbt/sbt  package assemblyPackageDependency
+2016-01-24 12:28:03,002 INFO  io.prediction.tools.console.Console$ [main] - Build finished successfully.
+2016-01-24 12:28:03,003 INFO  io.prediction.tools.console.Console$ [main] - Looking for an engine...
+2016-01-24 12:28:03,012 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar
+2016-01-24 12:28:03,012 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar
+2016-01-24 12:28:04,039 INFO  io.prediction.tools.RegisterEngine$ [main] - Registering engine OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB c01a5d68ffa4e35e033e675b2d0461807f016b7e
+2016-01-24 12:28:04,056 INFO  io.prediction.tools.console.Console$ [main] - Your engine is ready for training.
+2016-01-24 12:28:05,073 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:28:06,121 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateWorkflow --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engine-id OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB --engine-version c01a5d68ffa4e35e033e675b2d0461807f016b7e --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --verbosity 0 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:28:08,078 INFO  io.prediction.controller.Engine [main] - Extracting datasource params...
+2016-01-24 12:28:08,165 INFO  io.prediction.workflow.WorkflowUtils$ [main] - No 'name' is found. Default empty String will be used.
+2016-01-24 12:28:08,180 INFO  io.prediction.controller.Engine [main] - Datasource params: (,DataSourceParams(RecipeRecommendationFinal))
+2016-01-24 12:28:08,180 INFO  io.prediction.controller.Engine [main] - Extracting preparator params...
+2016-01-24 12:28:08,181 INFO  io.prediction.controller.Engine [main] - Preparator params: (,Empty)
+2016-01-24 12:28:08,348 INFO  io.prediction.controller.Engine [main] - Extracting serving params...
+2016-01-24 12:28:08,349 INFO  io.prediction.controller.Engine [main] - Serving params: (,Empty)
+2016-01-24 12:28:09,775 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Starting remoting
+2016-01-24 12:28:09,949 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:62588]
+2016-01-24 12:28:10,712 WARN  org.apache.spark.metrics.MetricsSystem [main] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:28:11,030 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train
+2016-01-24 12:28:11,031 INFO  io.prediction.controller.Engine$ [main] - DataSource: com.recipe.DataSource@1ec88aa1
+2016-01-24 12:28:11,031 INFO  io.prediction.controller.Engine$ [main] - Preparator: com.recipe.Preparator@3030836d
+2016-01-24 12:28:11,032 INFO  io.prediction.controller.Engine$ [main] - AlgorithmList: List(com.recipe.RecipeAlgorithm@4c24f3a2)
+2016-01-24 12:28:11,032 INFO  io.prediction.controller.Engine$ [main] - Data sanity check is on.
+2016-01-24 12:28:11,080 ERROR io.prediction.data.store.Common$ [main] - Invalid app name RecipeRecommendationFinal
+2016-01-24 12:28:13,929 ERROR io.prediction.tools.console.Console$ [main] - No valid engine instance found for engine OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB c01a5d68ffa4e35e033e675b2d0461807f016b7e.
+Try running 'train' before 'deploy'. Aborting.
+2016-01-24 12:29:42,056 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:29:42,112 INFO  io.prediction.tools.console.Console$ [main] - Using command '/Users/byeondongnam/PredictionIO/sbt/sbt' at the current working directory to build.
+2016-01-24 12:29:42,112 INFO  io.prediction.tools.console.Console$ [main] - If the path above is incorrect, this process will fail.
+2016-01-24 12:29:42,113 INFO  io.prediction.tools.console.Console$ [main] - Uber JAR disabled. Making sure lib/pio-assembly-0.9.5.jar is absent.
+2016-01-24 12:29:42,113 INFO  io.prediction.tools.console.Console$ [main] - Going to run: /Users/byeondongnam/PredictionIO/sbt/sbt  package assemblyPackageDependency
+2016-01-24 12:29:46,649 INFO  io.prediction.tools.console.Console$ [main] - Build finished successfully.
+2016-01-24 12:29:46,649 INFO  io.prediction.tools.console.Console$ [main] - Looking for an engine...
+2016-01-24 12:29:46,656 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar
+2016-01-24 12:29:46,656 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar
+2016-01-24 12:29:47,610 INFO  io.prediction.tools.RegisterEngine$ [main] - Registering engine OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB c01a5d68ffa4e35e033e675b2d0461807f016b7e
+2016-01-24 12:29:47,627 INFO  io.prediction.tools.console.Console$ [main] - Your engine is ready for training.
+2016-01-24 12:29:48,628 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:29:49,671 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateWorkflow --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engine-id OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB --engine-version c01a5d68ffa4e35e033e675b2d0461807f016b7e --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --verbosity 0 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:29:51,317 INFO  io.prediction.controller.Engine [main] - Extracting datasource params...
+2016-01-24 12:29:51,379 INFO  io.prediction.workflow.WorkflowUtils$ [main] - No 'name' is found. Default empty String will be used.
+2016-01-24 12:29:51,391 INFO  io.prediction.controller.Engine [main] - Datasource params: (,DataSourceParams(test2))
+2016-01-24 12:29:51,391 INFO  io.prediction.controller.Engine [main] - Extracting preparator params...
+2016-01-24 12:29:51,393 INFO  io.prediction.controller.Engine [main] - Preparator params: (,Empty)
+2016-01-24 12:29:51,544 INFO  io.prediction.controller.Engine [main] - Extracting serving params...
+2016-01-24 12:29:51,545 INFO  io.prediction.controller.Engine [main] - Serving params: (,Empty)
+2016-01-24 12:29:52,783 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-2] - Starting remoting
+2016-01-24 12:29:52,904 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:62672]
+2016-01-24 12:29:53,492 WARN  org.apache.spark.metrics.MetricsSystem [main] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:29:53,732 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train
+2016-01-24 12:29:53,732 INFO  io.prediction.controller.Engine$ [main] - DataSource: com.recipe.DataSource@5f193335
+2016-01-24 12:29:53,733 INFO  io.prediction.controller.Engine$ [main] - Preparator: com.recipe.Preparator@3e6748ae
+2016-01-24 12:29:53,733 INFO  io.prediction.controller.Engine$ [main] - AlgorithmList: List(com.recipe.RecipeAlgorithm@6af78a48)
+2016-01-24 12:29:53,733 INFO  io.prediction.controller.Engine$ [main] - Data sanity check is on.
+2016-01-24 12:29:55,174 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:29:55,369 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:29:55,451 INFO  io.prediction.controller.Engine$ [main] - com.recipe.TrainingData does not support data sanity check. Skipping check.
+2016-01-24 12:29:55,452 INFO  io.prediction.controller.Engine$ [main] - com.recipe.PreparedData does not support data sanity check. Skipping check.
+2016-01-24 12:29:55,586 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:29:57,151 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-2] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2016-01-24 12:29:57,151 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-2] - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2016-01-24 12:29:57,272 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-1] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2016-01-24 12:29:57,272 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-1] - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2016-01-24 12:29:59,547 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:29:59,550 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
+2016-01-24 12:29:59,550 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
+2016-01-24 12:30:01,199 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - Requested 50 singular values but only found 4 nonzeros.
+2016-01-24 12:30:01,200 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:30:01,210 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #0 = 8.666704275138512
+2016-01-24 12:30:01,211 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #1 = 3.0295168117948617
+2016-01-24 12:30:01,211 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #2 = 2.8973136972445253
+2016-01-24 12:30:01,211 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #3 = 2.7047806258747458
+2016-01-24 12:30:01,218 INFO  com.recipe.RecipeAlgorithm [main] - Worst case variability grasped: 73.21759569884767%
+2016-01-24 12:30:01,221 INFO  io.prediction.controller.Engine$ [main] - com.recipe.RecipeAlgorithmModel does not support data sanity check. Skipping check.
+2016-01-24 12:30:01,222 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train completed
+2016-01-24 12:30:01,222 INFO  io.prediction.controller.Engine [main] - engineInstanceId=AVJxrkSqFS_tjqqlkoNN
+2016-01-24 12:30:01,231 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Inserting persistent model
+2016-01-24 12:30:01,346 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Updating engine instance
+2016-01-24 12:30:01,360 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Training completed successfully.
+2016-01-24 12:30:04,192 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateServer --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engineInstanceId AVJxrkSqFS_tjqqlkoNN --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --ip 0.0.0.0 --port 8000 --event-server-ip 0.0.0.0 --event-server-port 7070 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:30:06,401 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-2] - Non-empty parameters supplied to com.recipe.Preparator, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:30:06,587 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-2] - Non-empty parameters supplied to com.recipe.Serving, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:30:07,282 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-5] - Starting remoting
+2016-01-24 12:30:07,389 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-5] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:62720]
+2016-01-24 12:30:07,926 WARN  org.apache.spark.metrics.MetricsSystem [pio-server-akka.actor.default-dispatcher-2] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:30:08,162 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-2] - Using persisted model
+2016-01-24 12:30:08,163 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-2] - Loaded model com.recipe.RecipeAlgorithmModel for algorithm com.recipe.RecipeAlgorithm
+2016-01-24 12:30:08,173 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Undeploying any existing engine instance at http://0.0.0.0:8000
+2016-01-24 12:30:08,186 WARN  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Nothing at http://0.0.0.0:8000
+2016-01-24 12:30:08,729 INFO  spray.can.server.HttpListener [pio-server-akka.actor.default-dispatcher-3] - Bound to /0.0.0.0:8000
+2016-01-24 12:30:08,730 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-2] - Engine is deployed and running. Engine API is live at http://0.0.0.0:8000.
+2016-01-24 12:30:44,594 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-15] - User u21 requires 0 recommendation recipes.
+2016-01-24 12:30:45,218 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-2] - Query:
+{"num": 100, "user": "u21"}
+
+Stack Trace:
+java.lang.NullPointerException
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:453)
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:107)
+	at io.prediction.controller.P2LAlgorithm.predictBase(P2LAlgorithm.scala:70)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:516)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:515)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:515)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:493)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:25)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:24)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:38)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:37)
+	at spray.routing.directives.BasicDirectives$$anon$1.happly(BasicDirectives.scala:26)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:37)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:36)
+	at spray.routing.directives.BasicDirectives$$anon$2.happly(BasicDirectives.scala:79)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply$mcV$sp(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+
+
+2016-01-24 12:31:48,989 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-11] - User u19 requires 0 recommendation recipes.
+2016-01-24 12:31:49,012 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-5] - Query:
+{"num": 100, "user": "u19"}
+
+Stack Trace:
+java.lang.NullPointerException
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:453)
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:107)
+	at io.prediction.controller.P2LAlgorithm.predictBase(P2LAlgorithm.scala:70)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:516)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:515)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:515)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:493)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:25)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:24)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:38)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:37)
+	at spray.routing.directives.BasicDirectives$$anon$1.happly(BasicDirectives.scala:26)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:37)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:36)
+	at spray.routing.directives.BasicDirectives$$anon$2.happly(BasicDirectives.scala:79)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply$mcV$sp(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+
+
+2016-01-24 12:34:13,065 INFO  io.prediction.tools.console.App$ [main] - Data of the following app (default channel only) will be deleted. Are you sure?
+2016-01-24 12:34:13,066 INFO  io.prediction.tools.console.App$ [main] -     App Name: test2
+2016-01-24 12:34:13,066 INFO  io.prediction.tools.console.App$ [main] -       App ID: 2
+2016-01-24 12:34:13,066 INFO  io.prediction.tools.console.App$ [main] -  Description: None
+2016-01-24 12:34:17,172 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_2...
+2016-01-24 12:34:18,423 INFO  io.prediction.tools.console.App$ [main] - Removed Event Store for this app ID: 2
+2016-01-24 12:34:18,552 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_2 doesn't exist yet. Creating now...
+2016-01-24 12:34:18,807 INFO  io.prediction.tools.console.App$ [main] - Initialized Event Store for this app ID: 2.
+2016-01-24 12:34:18,911 INFO  io.prediction.tools.console.App$ [main] - Done.
+2016-01-24 12:34:27,116 INFO  io.prediction.tools.console.App$ [main] - The following app (including all channels) will be deleted. Are you sure?
+2016-01-24 12:34:27,118 INFO  io.prediction.tools.console.App$ [main] -     App Name: test
+2016-01-24 12:34:27,118 INFO  io.prediction.tools.console.App$ [main] -       App ID: 1
+2016-01-24 12:34:27,119 INFO  io.prediction.tools.console.App$ [main] -  Description: 
+2016-01-24 12:35:04,148 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_1...
+2016-01-24 12:35:05,400 INFO  io.prediction.tools.console.App$ [main] - Removed Event Store for this app ID: 1
+2016-01-24 12:35:05,413 INFO  io.prediction.tools.console.App$ [main] - Removed access key Xt1V7WxGvUwxTFB2mbMzxDIBQKlNgZ4u5J6yhcbsBjQAtDomx45n3KdSXxxPPfw0
+2016-01-24 12:35:05,415 INFO  io.prediction.tools.console.App$ [main] - Deleted app test.
+2016-01-24 12:35:05,415 INFO  io.prediction.tools.console.App$ [main] - Done.
+2016-01-24 12:36:49,510 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:36:49,564 INFO  io.prediction.tools.console.Console$ [main] - Using command '/Users/byeondongnam/PredictionIO/sbt/sbt' at the current working directory to build.
+2016-01-24 12:36:49,565 INFO  io.prediction.tools.console.Console$ [main] - If the path above is incorrect, this process will fail.
+2016-01-24 12:36:49,565 INFO  io.prediction.tools.console.Console$ [main] - Uber JAR disabled. Making sure lib/pio-assembly-0.9.5.jar is absent.
+2016-01-24 12:36:49,565 INFO  io.prediction.tools.console.Console$ [main] - Going to run: /Users/byeondongnam/PredictionIO/sbt/sbt  package assemblyPackageDependency
+2016-01-24 12:36:54,947 INFO  io.prediction.tools.console.Console$ [main] - Build finished successfully.
+2016-01-24 12:36:54,948 INFO  io.prediction.tools.console.Console$ [main] - Looking for an engine...
+2016-01-24 12:36:54,954 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar
+2016-01-24 12:36:54,954 INFO  io.prediction.tools.console.Console$ [main] - Found template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar
+2016-01-24 12:36:55,951 INFO  io.prediction.tools.RegisterEngine$ [main] - Registering engine OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB c01a5d68ffa4e35e033e675b2d0461807f016b7e
+2016-01-24 12:36:55,966 INFO  io.prediction.tools.console.Console$ [main] - Your engine is ready for training.
+2016-01-24 12:36:57,014 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:36:58,048 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateWorkflow --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engine-id OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB --engine-version c01a5d68ffa4e35e033e675b2d0461807f016b7e --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --verbosity 0 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:36:59,623 INFO  io.prediction.controller.Engine [main] - Extracting datasource params...
+2016-01-24 12:36:59,689 INFO  io.prediction.workflow.WorkflowUtils$ [main] - No 'name' is found. Default empty String will be used.
+2016-01-24 12:36:59,700 INFO  io.prediction.controller.Engine [main] - Datasource params: (,DataSourceParams(test2))
+2016-01-24 12:36:59,700 INFO  io.prediction.controller.Engine [main] - Extracting preparator params...
+2016-01-24 12:36:59,701 INFO  io.prediction.controller.Engine [main] - Preparator params: (,Empty)
+2016-01-24 12:36:59,865 INFO  io.prediction.controller.Engine [main] - Extracting serving params...
+2016-01-24 12:36:59,865 INFO  io.prediction.controller.Engine [main] - Serving params: (,Empty)
+2016-01-24 12:37:01,114 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-2] - Starting remoting
+2016-01-24 12:37:01,234 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-2] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@172.20.10.3:63110]
+2016-01-24 12:37:02,002 WARN  org.apache.spark.metrics.MetricsSystem [main] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:37:02,246 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train
+2016-01-24 12:37:02,246 INFO  io.prediction.controller.Engine$ [main] - DataSource: com.recipe.DataSource@5f193335
+2016-01-24 12:37:02,247 INFO  io.prediction.controller.Engine$ [main] - Preparator: com.recipe.Preparator@3e6748ae
+2016-01-24 12:37:02,247 INFO  io.prediction.controller.Engine$ [main] - AlgorithmList: List(com.recipe.RecipeAlgorithm@6af78a48)
+2016-01-24 12:37:02,247 INFO  io.prediction.controller.Engine$ [main] - Data sanity check is on.
+2016-01-24 12:37:22,729 ERROR io.prediction.data.storage.hbase.StorageClient [main] - HBase master is not running (ZooKeeper ensemble: localhost). Please make sure that HBase is running properly, and that the configuration is pointing at the correct ZooKeeper ensemble.
+2016-01-24 12:37:22,731 ERROR io.prediction.data.storage.Storage$ [main] - Error initializing storage client for source HBASE
+org.apache.hadoop.hbase.MasterNotRunningException: com.google.protobuf.ServiceException: org.apache.hadoop.net.ConnectTimeoutException: 20000 millis timeout while waiting for channel to be ready for connect. ch : java.nio.channels.SocketChannel[connection-pending remote=/192.168.0.10:61993]
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStub(HConnectionManager.java:1645)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$MasterServiceStubMaker.makeStub(HConnectionManager.java:1671)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.getKeepAliveMasterService(HConnectionManager.java:1878)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.isMasterRunning(HConnectionManager.java:894)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.checkHBaseAvailable(HBaseAdmin.java:2366)
+	at io.prediction.data.storage.hbase.StorageClient.<init>(StorageClient.scala:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at io.prediction.data.storage.Storage$.getClient(Storage.scala:217)
+	at io.prediction.data.storage.Storage$.io$prediction$data$storage$Storage$$updateS2CM(Storage.scala:248)
+	at io.prediction.data.storage.Storage$$anonfun$sourcesToClientMeta$1.apply(Storage.scala:209)
+	at io.prediction.data.storage.Storage$$anonfun$sourcesToClientMeta$1.apply(Storage.scala:209)
+	at scala.collection.mutable.MapLike$class.getOrElseUpdate(MapLike.scala:189)
+	at scala.collection.mutable.AbstractMap.getOrElseUpdate(Map.scala:91)
+	at io.prediction.data.storage.Storage$.sourcesToClientMeta(Storage.scala:209)
+	at io.prediction.data.storage.Storage$.getDataObject(Storage.scala:278)
+	at io.prediction.data.storage.Storage$.getPDataObject(Storage.scala:327)
+	at io.prediction.data.storage.Storage$.getPDataObject(Storage.scala:270)
+	at io.prediction.data.storage.Storage$.getPEvents(Storage.scala:391)
+	at io.prediction.data.store.PEventStore$.eventsDb$lzycompute(PEventStore.scala:32)
+	at io.prediction.data.store.PEventStore$.eventsDb(PEventStore.scala:32)
+	at io.prediction.data.store.PEventStore$.aggregateProperties(PEventStore.scala:105)
+	at com.recipe.DataSource.readTraining(DataSource.scala:31)
+	at com.recipe.DataSource.readTraining(DataSource.scala:18)
+	at io.prediction.controller.PDataSource.readTrainingBase(PDataSource.scala:37)
+	at io.prediction.controller.Engine$.train(Engine.scala:640)
+	at io.prediction.controller.Engine.train(Engine.scala:174)
+	at io.prediction.workflow.CoreWorkflow$.runTrain(CoreWorkflow.scala:65)
+	at io.prediction.workflow.CreateWorkflow$.main(CreateWorkflow.scala:247)
+	at io.prediction.workflow.CreateWorkflow.main(CreateWorkflow.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:672)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: com.google.protobuf.ServiceException: org.apache.hadoop.net.ConnectTimeoutException: 20000 millis timeout while waiting for channel to be ready for connect. ch : java.nio.channels.SocketChannel[connection-pending remote=/192.168.0.10:61993]
+	at org.apache.hadoop.hbase.ipc.RpcClient.callBlockingMethod(RpcClient.java:1678)
+	at org.apache.hadoop.hbase.ipc.RpcClient$BlockingRpcChannelImplementation.callBlockingMethod(RpcClient.java:1719)
+	at org.apache.hadoop.hbase.protobuf.generated.MasterProtos$MasterService$BlockingStub.isMasterRunning(MasterProtos.java:42561)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$MasterServiceStubMaker.isMasterRunning(HConnectionManager.java:1682)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStubNoRetries(HConnectionManager.java:1591)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStub(HConnectionManager.java:1617)
+	... 40 more
+Caused by: org.apache.hadoop.net.ConnectTimeoutException: 20000 millis timeout while waiting for channel to be ready for connect. ch : java.nio.channels.SocketChannel[connection-pending remote=/192.168.0.10:61993]
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:533)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:494)
+	at org.apache.hadoop.hbase.ipc.RpcClient$Connection.setupConnection(RpcClient.java:578)
+	at org.apache.hadoop.hbase.ipc.RpcClient$Connection.setupIOstreams(RpcClient.java:868)
+	at org.apache.hadoop.hbase.ipc.RpcClient.getConnection(RpcClient.java:1543)
+	at org.apache.hadoop.hbase.ipc.RpcClient.call(RpcClient.java:1442)
+	at org.apache.hadoop.hbase.ipc.RpcClient.callBlockingMethod(RpcClient.java:1661)
+	... 45 more
+2016-01-24 12:37:22,734 ERROR io.prediction.controller.Engine$ [main] - Error occured reading from data source. (Reason: Data source HBASE was not properly initialized.) Please see the log for debugging details.
+io.prediction.data.storage.StorageClientException: Data source HBASE was not properly initialized.
+	at io.prediction.data.storage.Storage$$anonfun$10.apply(Storage.scala:279)
+	at io.prediction.data.storage.Storage$$anonfun$10.apply(Storage.scala:279)
+	at scala.Option.getOrElse(Option.scala:120)
+	at io.prediction.data.storage.Storage$.getDataObject(Storage.scala:278)
+	at io.prediction.data.storage.Storage$.getPDataObject(Storage.scala:327)
+	at io.prediction.data.storage.Storage$.getPDataObject(Storage.scala:270)
+	at io.prediction.data.storage.Storage$.getPEvents(Storage.scala:391)
+	at io.prediction.data.store.PEventStore$.eventsDb$lzycompute(PEventStore.scala:32)
+	at io.prediction.data.store.PEventStore$.eventsDb(PEventStore.scala:32)
+	at io.prediction.data.store.PEventStore$.aggregateProperties(PEventStore.scala:105)
+	at com.recipe.DataSource.readTraining(DataSource.scala:31)
+	at com.recipe.DataSource.readTraining(DataSource.scala:18)
+	at io.prediction.controller.PDataSource.readTrainingBase(PDataSource.scala:37)
+	at io.prediction.controller.Engine$.train(Engine.scala:640)
+	at io.prediction.controller.Engine.train(Engine.scala:174)
+	at io.prediction.workflow.CoreWorkflow$.runTrain(CoreWorkflow.scala:65)
+	at io.prediction.workflow.CreateWorkflow$.main(CreateWorkflow.scala:247)
+	at io.prediction.workflow.CreateWorkflow.main(CreateWorkflow.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:672)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+2016-01-24 12:37:25,443 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateServer --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engineInstanceId AVJxrkSqFS_tjqqlkoNN --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --ip 0.0.0.0 --port 8000 --event-server-ip 0.0.0.0 --event-server-port 7070 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:37:27,663 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-3] - Non-empty parameters supplied to com.recipe.Preparator, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:37:27,848 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-3] - Non-empty parameters supplied to com.recipe.Serving, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:37:28,541 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-5] - Starting remoting
+2016-01-24 12:37:28,655 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-5] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@172.20.10.3:63150]
+2016-01-24 12:37:29,299 WARN  org.apache.spark.metrics.MetricsSystem [pio-server-akka.actor.default-dispatcher-3] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:37:29,532 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-3] - Using persisted model
+2016-01-24 12:37:29,533 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-3] - Loaded model com.recipe.RecipeAlgorithmModel for algorithm com.recipe.RecipeAlgorithm
+2016-01-24 12:37:29,542 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Undeploying any existing engine instance at http://0.0.0.0:8000
+2016-01-24 12:37:29,560 WARN  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Nothing at http://0.0.0.0:8000
+2016-01-24 12:37:30,114 INFO  spray.can.server.HttpListener [pio-server-akka.actor.default-dispatcher-4] - Bound to /0.0.0.0:8000
+2016-01-24 12:37:30,115 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Engine is deployed and running. Engine API is live at http://0.0.0.0:8000.
+2016-01-24 12:41:25,720 INFO  io.prediction.tools.console.Console$ [main] - Inspecting PredictionIO...
+2016-01-24 12:41:25,723 INFO  io.prediction.tools.console.Console$ [main] - PredictionIO 0.9.5 is installed at /Users/byeondongnam/PredictionIO
+2016-01-24 12:41:25,724 INFO  io.prediction.tools.console.Console$ [main] - Inspecting Apache Spark...
+2016-01-24 12:41:25,734 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark is installed at /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1
+2016-01-24 12:41:25,773 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark 1.5.1 detected (meets minimum requirement of 1.3.0)
+2016-01-24 12:41:25,774 INFO  io.prediction.tools.console.Console$ [main] - Inspecting storage backend connections...
+2016-01-24 12:41:25,791 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Meta Data Backend (Source: ELASTICSEARCH)...
+2016-01-24 12:41:26,828 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Model Data Backend (Source: LOCALFS)...
+2016-01-24 12:41:26,832 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Event Data Backend (Source: HBASE)...
+2016-01-24 12:41:27,616 INFO  io.prediction.data.storage.Storage$ [main] - Test writing to Event Store (App Id 0)...
+2016-01-24 12:41:27,860 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_0 doesn't exist yet. Creating now...
+2016-01-24 12:41:28,322 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_0...
+2016-01-24 12:41:29,649 INFO  io.prediction.tools.console.Console$ [main] - (sleeping 5 seconds for all messages to show up...)
+2016-01-24 12:41:34,653 INFO  io.prediction.tools.console.Console$ [main] - Your system is all ready to go.
+2016-01-24 12:41:49,662 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:41:50,724 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateWorkflow --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engine-id OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB --engine-version c01a5d68ffa4e35e033e675b2d0461807f016b7e --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --verbosity 0 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:41:52,316 INFO  io.prediction.controller.Engine [main] - Extracting datasource params...
+2016-01-24 12:41:52,379 INFO  io.prediction.workflow.WorkflowUtils$ [main] - No 'name' is found. Default empty String will be used.
+2016-01-24 12:41:52,394 INFO  io.prediction.controller.Engine [main] - Datasource params: (,DataSourceParams(test2))
+2016-01-24 12:41:52,394 INFO  io.prediction.controller.Engine [main] - Extracting preparator params...
+2016-01-24 12:41:52,396 INFO  io.prediction.controller.Engine [main] - Preparator params: (,Empty)
+2016-01-24 12:41:52,551 INFO  io.prediction.controller.Engine [main] - Extracting serving params...
+2016-01-24 12:41:52,551 INFO  io.prediction.controller.Engine [main] - Serving params: (,Empty)
+2016-01-24 12:41:53,809 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Starting remoting
+2016-01-24 12:41:53,930 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:63497]
+2016-01-24 12:41:54,486 WARN  org.apache.spark.metrics.MetricsSystem [main] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:41:54,738 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train
+2016-01-24 12:41:54,738 INFO  io.prediction.controller.Engine$ [main] - DataSource: com.recipe.DataSource@5f193335
+2016-01-24 12:41:54,739 INFO  io.prediction.controller.Engine$ [main] - Preparator: com.recipe.Preparator@3e6748ae
+2016-01-24 12:41:54,739 INFO  io.prediction.controller.Engine$ [main] - AlgorithmList: List(com.recipe.RecipeAlgorithm@6af78a48)
+2016-01-24 12:41:54,739 INFO  io.prediction.controller.Engine$ [main] - Data sanity check is on.
+2016-01-24 12:41:56,036 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:41:56,187 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:41:56,277 INFO  io.prediction.controller.Engine$ [main] - com.recipe.TrainingData does not support data sanity check. Skipping check.
+2016-01-24 12:41:56,277 INFO  io.prediction.controller.Engine$ [main] - com.recipe.PreparedData does not support data sanity check. Skipping check.
+2016-01-24 12:41:56,310 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:41:57,717 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-1] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2016-01-24 12:41:57,718 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-1] - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2016-01-24 12:41:57,843 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-6] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2016-01-24 12:41:57,844 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-6] - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2016-01-24 12:42:00,110 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:42:00,112 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
+2016-01-24 12:42:00,112 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
+2016-01-24 12:42:01,423 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - Requested 50 singular values but only found 4 nonzeros.
+2016-01-24 12:42:01,423 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:42:01,432 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #0 = 8.666704275138512
+2016-01-24 12:42:01,432 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #1 = 3.0295168117948617
+2016-01-24 12:42:01,432 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #2 = 2.8973136972445253
+2016-01-24 12:42:01,432 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #3 = 2.7047806258747458
+2016-01-24 12:42:01,438 INFO  com.recipe.RecipeAlgorithm [main] - Worst case variability grasped: 73.21759569884767%
+2016-01-24 12:42:01,441 INFO  io.prediction.controller.Engine$ [main] - com.recipe.RecipeAlgorithmModel does not support data sanity check. Skipping check.
+2016-01-24 12:42:01,442 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train completed
+2016-01-24 12:42:01,442 INFO  io.prediction.controller.Engine [main] - engineInstanceId=AVJxuUUdFS_tjqqlkoNP
+2016-01-24 12:42:01,449 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Inserting persistent model
+2016-01-24 12:42:01,546 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Updating engine instance
+2016-01-24 12:42:01,554 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Training completed successfully.
+2016-01-24 12:42:04,344 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateServer --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engineInstanceId AVJxuUUdFS_tjqqlkoNP --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --ip 0.0.0.0 --port 8000 --event-server-ip 0.0.0.0 --event-server-port 7070 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:42:06,538 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-2] - Non-empty parameters supplied to com.recipe.Preparator, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:42:06,721 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-2] - Non-empty parameters supplied to com.recipe.Serving, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:42:07,528 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-4] - Starting remoting
+2016-01-24 12:42:07,640 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-4] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:63544]
+2016-01-24 12:42:08,194 WARN  org.apache.spark.metrics.MetricsSystem [pio-server-akka.actor.default-dispatcher-2] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:42:08,419 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-2] - Using persisted model
+2016-01-24 12:42:08,420 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-2] - Loaded model com.recipe.RecipeAlgorithmModel for algorithm com.recipe.RecipeAlgorithm
+2016-01-24 12:42:08,431 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Undeploying any existing engine instance at http://0.0.0.0:8000
+2016-01-24 12:42:08,445 WARN  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Nothing at http://0.0.0.0:8000
+2016-01-24 12:42:09,004 INFO  spray.can.server.HttpListener [pio-server-akka.actor.default-dispatcher-3] - Bound to /0.0.0.0:8000
+2016-01-24 12:42:09,004 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-3] - Engine is deployed and running. Engine API is live at http://0.0.0.0:8000.
+2016-01-24 12:42:29,857 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-15] - User u19 requires 0 recommendation recipes.
+2016-01-24 12:42:30,466 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-3] - Query:
+{"num": 100, "user": "u19"}
+
+Stack Trace:
+java.lang.NullPointerException
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:453)
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:107)
+	at io.prediction.controller.P2LAlgorithm.predictBase(P2LAlgorithm.scala:70)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:516)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:515)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:515)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:493)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:25)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:24)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:38)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:37)
+	at spray.routing.directives.BasicDirectives$$anon$1.happly(BasicDirectives.scala:26)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:37)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:36)
+	at spray.routing.directives.BasicDirectives$$anon$2.happly(BasicDirectives.scala:79)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply$mcV$sp(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+
+
+2016-01-24 12:43:03,194 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-11] - User u19 requires 0 recommendation recipes.
+2016-01-24 12:43:03,207 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-2] - Query:
+{"num": 10, "user": "u19"}
+
+Stack Trace:
+java.lang.NullPointerException
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:453)
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:107)
+	at io.prediction.controller.P2LAlgorithm.predictBase(P2LAlgorithm.scala:70)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:516)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:515)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:515)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:493)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:25)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:24)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:38)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:37)
+	at spray.routing.directives.BasicDirectives$$anon$1.happly(BasicDirectives.scala:26)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:37)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:36)
+	at spray.routing.directives.BasicDirectives$$anon$2.happly(BasicDirectives.scala:79)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply$mcV$sp(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+
+
+2016-01-24 12:43:15,664 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-9] - User u19 requires 0 recommendation recipes.
+2016-01-24 12:43:15,677 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-3] - Query:
+{"user": "u19"}
+
+Stack Trace:
+java.lang.NullPointerException
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:453)
+	at com.recipe.RecipeAlgorithm.predict(RecipeAlgorithm.scala:107)
+	at io.prediction.controller.P2LAlgorithm.predictBase(P2LAlgorithm.scala:70)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:516)
+	at io.prediction.workflow.ServerActor$$anonfun$24$$anonfun$25.apply(CreateServer.scala:515)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:515)
+	at io.prediction.workflow.ServerActor$$anonfun$24.apply(CreateServer.scala:493)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:25)
+	at spray.routing.ApplyConverterInstances$$anon$22$$anonfun$apply$1.apply(ApplyConverterInstances.scala:24)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:38)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1$$anonfun$apply$1.apply(Directive.scala:37)
+	at spray.routing.directives.BasicDirectives$$anon$1.happly(BasicDirectives.scala:26)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:37)
+	at spray.routing.ConjunctionMagnet$$anon$1$$anon$2$$anonfun$happly$1.apply(Directive.scala:36)
+	at spray.routing.directives.BasicDirectives$$anon$2.happly(BasicDirectives.scala:79)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.Directive$$anon$7$$anonfun$happly$4.apply(Directive.scala:86)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.BasicDirectives$$anon$3$$anonfun$happly$1.apply(BasicDirectives.scala:92)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply$mcV$sp(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at spray.routing.directives.ExecutionDirectives$$anonfun$detach$1$$anonfun$apply$7$$anonfun$apply$3.apply(ExecutionDirectives.scala:89)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+
+
+2016-01-24 12:44:57,467 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-7] - User u19 requires 30 recommendation recipes.
+2016-01-24 12:44:57,495 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-7] - User u19 recently viewed or liked Set(i42, i94, i91, i49, i95, i54).
+2016-01-24 12:44:57,600 WARN  com.github.fommil.netlib.BLAS [ForkJoinPool-2-worker-7] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2016-01-24 12:44:57,600 WARN  com.github.fommil.netlib.BLAS [ForkJoinPool-2-worker-7] - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2016-01-24 12:44:57,631 INFO  com.recipe.Serving [ForkJoinPool-2-worker-7] - Recommendation result for user u19 is successfully sent to the user.
+2016-01-24 12:45:43,826 INFO  io.prediction.tools.console.App$ [main] - Data of the following app (default channel only) will be deleted. Are you sure?
+2016-01-24 12:45:43,827 INFO  io.prediction.tools.console.App$ [main] -     App Name: test2
+2016-01-24 12:45:43,827 INFO  io.prediction.tools.console.App$ [main] -       App ID: 2
+2016-01-24 12:45:43,828 INFO  io.prediction.tools.console.App$ [main] -  Description: None
+2016-01-24 12:45:46,189 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_2...
+2016-01-24 12:45:47,337 INFO  io.prediction.tools.console.App$ [main] - Removed Event Store for this app ID: 2
+2016-01-24 12:45:47,464 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_2 doesn't exist yet. Creating now...
+2016-01-24 12:45:47,721 INFO  io.prediction.tools.console.App$ [main] - Initialized Event Store for this app ID: 2.
+2016-01-24 12:45:47,824 INFO  io.prediction.tools.console.App$ [main] - Done.
+2016-01-24 12:45:50,694 INFO  io.prediction.tools.console.Console$ [main] - Inspecting PredictionIO...
+2016-01-24 12:45:50,697 INFO  io.prediction.tools.console.Console$ [main] - PredictionIO 0.9.5 is installed at /Users/byeondongnam/PredictionIO
+2016-01-24 12:45:50,698 INFO  io.prediction.tools.console.Console$ [main] - Inspecting Apache Spark...
+2016-01-24 12:45:50,708 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark is installed at /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1
+2016-01-24 12:45:50,748 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark 1.5.1 detected (meets minimum requirement of 1.3.0)
+2016-01-24 12:45:50,748 INFO  io.prediction.tools.console.Console$ [main] - Inspecting storage backend connections...
+2016-01-24 12:45:50,766 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Meta Data Backend (Source: ELASTICSEARCH)...
+2016-01-24 12:45:51,822 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Model Data Backend (Source: LOCALFS)...
+2016-01-24 12:45:51,825 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Event Data Backend (Source: HBASE)...
+2016-01-24 12:45:52,597 INFO  io.prediction.data.storage.Storage$ [main] - Test writing to Event Store (App Id 0)...
+2016-01-24 12:45:52,880 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_0 doesn't exist yet. Creating now...
+2016-01-24 12:45:53,373 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_0...
+2016-01-24 12:45:54,716 INFO  io.prediction.tools.console.Console$ [main] - (sleeping 5 seconds for all messages to show up...)
+2016-01-24 12:45:59,721 INFO  io.prediction.tools.console.Console$ [main] - Your system is all ready to go.
+2016-01-24 12:47:00,141 INFO  io.prediction.tools.console.Console$ [main] - Using existing engine manifest JSON at /Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/manifest.json
+2016-01-24 12:47:01,216 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateWorkflow --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engine-id OjKf7GPNUup5jHWZ42R8F4jqlLtcT2bB --engine-version c01a5d68ffa4e35e033e675b2d0461807f016b7e --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --verbosity 0 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:47:02,793 INFO  io.prediction.controller.Engine [main] - Extracting datasource params...
+2016-01-24 12:47:02,856 INFO  io.prediction.workflow.WorkflowUtils$ [main] - No 'name' is found. Default empty String will be used.
+2016-01-24 12:47:02,866 INFO  io.prediction.controller.Engine [main] - Datasource params: (,DataSourceParams(test2))
+2016-01-24 12:47:02,867 INFO  io.prediction.controller.Engine [main] - Extracting preparator params...
+2016-01-24 12:47:02,868 INFO  io.prediction.controller.Engine [main] - Preparator params: (,Empty)
+2016-01-24 12:47:03,017 INFO  io.prediction.controller.Engine [main] - Extracting serving params...
+2016-01-24 12:47:03,018 INFO  io.prediction.controller.Engine [main] - Serving params: (,Empty)
+2016-01-24 12:47:04,270 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Starting remoting
+2016-01-24 12:47:04,387 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:63743]
+2016-01-24 12:47:04,920 WARN  org.apache.spark.metrics.MetricsSystem [main] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:47:05,159 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train
+2016-01-24 12:47:05,160 INFO  io.prediction.controller.Engine$ [main] - DataSource: com.recipe.DataSource@5f193335
+2016-01-24 12:47:05,160 INFO  io.prediction.controller.Engine$ [main] - Preparator: com.recipe.Preparator@3e6748ae
+2016-01-24 12:47:05,161 INFO  io.prediction.controller.Engine$ [main] - AlgorithmList: List(com.recipe.RecipeAlgorithm@6af78a48)
+2016-01-24 12:47:05,161 INFO  io.prediction.controller.Engine$ [main] - Data sanity check is on.
+2016-01-24 12:47:06,502 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:47:06,710 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:47:06,797 INFO  io.prediction.controller.Engine$ [main] - com.recipe.TrainingData does not support data sanity check. Skipping check.
+2016-01-24 12:47:06,798 INFO  io.prediction.controller.Engine$ [main] - com.recipe.PreparedData does not support data sanity check. Skipping check.
+2016-01-24 12:47:06,895 WARN  org.apache.hadoop.hbase.mapreduce.TableInputFormatBase [main] - Cannot resolve the host name for /192.168.0.10 because of javax.naming.NameNotFoundException: DNS name not found [response code 3]; remaining name '10.0.168.192.in-addr.arpa'
+2016-01-24 12:47:08,274 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-4] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2016-01-24 12:47:08,274 WARN  com.github.fommil.netlib.BLAS [Executor task launch worker-4] - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2016-01-24 12:47:08,399 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-3] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2016-01-24 12:47:08,399 WARN  com.github.fommil.netlib.LAPACK [Executor task launch worker-3] - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2016-01-24 12:47:10,616 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:47:10,619 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
+2016-01-24 12:47:10,619 WARN  com.github.fommil.netlib.ARPACK [main] - Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
+2016-01-24 12:47:11,936 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - Requested 50 singular values but only found 4 nonzeros.
+2016-01-24 12:47:11,937 WARN  org.apache.spark.mllib.linalg.distributed.RowMatrix [main] - The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+2016-01-24 12:47:11,945 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #0 = 8.666704275138512
+2016-01-24 12:47:11,945 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #1 = 3.0295168117948617
+2016-01-24 12:47:11,945 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #2 = 2.8973136972445253
+2016-01-24 12:47:11,945 INFO  com.recipe.RecipeAlgorithm [main] - Singular value #3 = 2.7047806258747458
+2016-01-24 12:47:11,952 INFO  com.recipe.RecipeAlgorithm [main] - Worst case variability grasped: 73.21759569884767%
+2016-01-24 12:47:11,955 INFO  io.prediction.controller.Engine$ [main] - com.recipe.RecipeAlgorithmModel does not support data sanity check. Skipping check.
+2016-01-24 12:47:11,956 INFO  io.prediction.controller.Engine$ [main] - EngineWorkflow.train completed
+2016-01-24 12:47:11,956 INFO  io.prediction.controller.Engine [main] - engineInstanceId=AVJxvgHVFS_tjqqlkoNQ
+2016-01-24 12:47:11,963 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Inserting persistent model
+2016-01-24 12:47:12,052 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Updating engine instance
+2016-01-24 12:47:12,059 INFO  io.prediction.workflow.CoreWorkflow$ [main] - Training completed successfully.
+2016-01-24 12:47:14,855 INFO  io.prediction.tools.Runner$ [main] - Submission command: /Users/byeondongnam/PredictionIO/vendors/spark-1.5.1/bin/spark-submit --class io.prediction.workflow.CreateServer --jars file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation-assembly-0.1-SNAPSHOT-deps.jar,file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/target/scala-2.10/template-scala-parallel-ecommercerecommendation_2.10-0.1-SNAPSHOT.jar --files file:/Users/byeondongnam/PredictionIO/conf/log4j.properties,file:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf/hbase-site.xml --driver-class-path /Users/byeondongnam/PredictionIO/conf:/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0/conf file:/Users/byeondongnam/PredictionIO/lib/pio-assembly-0.9.5.jar --engineInstanceId AVJxvgHVFS_tjqqlkoNQ --engine-variant file:/Users/byeondongnam/My-Private-Chef/Recommendation-Engine-API/engine.json --ip 0.0.0.0 --port 8000 --event-server-ip 0.0.0.0 --event-server-port 7070 --json-extractor Both --env PIO_STORAGE_SOURCES_HBASE_TYPE=hbase,PIO_ENV_LOADED=1,PIO_STORAGE_REPOSITORIES_METADATA_NAME=pio_meta,PIO_FS_BASEDIR=/Users/byeondongnam/.pio_store,PIO_STORAGE_SOURCES_HBASE_HOME=/Users/byeondongnam/PredictionIO/vendors/hbase-1.0.0,PIO_HOME=/Users/byeondongnam/PredictionIO,PIO_FS_ENGINESDIR=/Users/byeondongnam/.pio_store/engines,PIO_STORAGE_SOURCES_LOCALFS_PATH=/Users/byeondongnam/.pio_store/models,PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE=elasticsearch,PIO_STORAGE_REPOSITORIES_METADATA_SOURCE=ELASTICSEARCH,PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE=LOCALFS,PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME=pio_event,PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME=/Users/byeondongnam/PredictionIO/vendors/elasticsearch-1.4.4,PIO_FS_TMPDIR=/Users/byeondongnam/.pio_store/tmp,PIO_STORAGE_REPOSITORIES_MODELDATA_NAME=pio_model,PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE=HBASE,PIO_CONF_DIR=/Users/byeondongnam/PredictionIO/conf,PIO_STORAGE_SOURCES_LOCALFS_TYPE=localfs
+2016-01-24 12:47:17,059 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-3] - Non-empty parameters supplied to com.recipe.Preparator, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:47:17,248 WARN  io.prediction.workflow.WorkflowUtils$ [pio-server-akka.actor.default-dispatcher-3] - Non-empty parameters supplied to com.recipe.Serving, but its constructor does not accept any arguments. Stubbing with empty parameters.
+2016-01-24 12:47:17,926 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Starting remoting
+2016-01-24 12:47:18,038 INFO  Remoting [sparkDriver-akka.actor.default-dispatcher-3] - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.0.10:63789]
+2016-01-24 12:47:18,602 WARN  org.apache.spark.metrics.MetricsSystem [pio-server-akka.actor.default-dispatcher-3] - Using default name DAGScheduler for source because spark.app.id is not set.
+2016-01-24 12:47:18,825 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-3] - Using persisted model
+2016-01-24 12:47:18,826 INFO  io.prediction.controller.Engine [pio-server-akka.actor.default-dispatcher-3] - Loaded model com.recipe.RecipeAlgorithmModel for algorithm com.recipe.RecipeAlgorithm
+2016-01-24 12:47:18,835 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Undeploying any existing engine instance at http://0.0.0.0:8000
+2016-01-24 12:47:18,848 WARN  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-4] - Nothing at http://0.0.0.0:8000
+2016-01-24 12:47:19,371 INFO  spray.can.server.HttpListener [pio-server-akka.actor.default-dispatcher-2] - Bound to /0.0.0.0:8000
+2016-01-24 12:47:19,372 INFO  io.prediction.workflow.MasterActor [pio-server-akka.actor.default-dispatcher-2] - Engine is deployed and running. Engine API is live at http://0.0.0.0:8000.
+2016-01-24 12:47:34,160 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-15] - User u19 requires 30 recommendation recipes.
+2016-01-24 12:47:34,826 INFO  com.recipe.RecipeAlgorithm [ForkJoinPool-2-worker-15] - User u19 recently viewed or liked Set(i42, i94, i91, i49, i95, i54).
+2016-01-24 12:47:34,899 WARN  com.github.fommil.netlib.BLAS [ForkJoinPool-2-worker-15] - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2016-01-24 12:47:34,900 WARN  com.github.fommil.netlib.BLAS [ForkJoinPool-2-worker-15] - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2016-01-24 12:47:34,931 INFO  com.recipe.Serving [ForkJoinPool-2-worker-15] - Recommendation result for user u19 is successfully sent to the user.

@@ -1,0 +1,30 @@
+{
+  "id": "default",
+  "description": "Default settings",
+  "engineFactory": "com.recipe.RecommendationEngine",
+  "datasource": {
+    "params" : {
+      "appName": "test2"
+    }
+  },
+  "algorithms": [
+    {
+      "name": "RecipeAlgorithm",
+      "params": {
+        "appName": "test2",
+        "unseenOnly": true,
+        "seenEvents": ["like", "view"],
+        "similarEvents": ["like", "view"],
+        "rank": 10,
+        "numIterations" : 20,
+        "lambda": 0.01,
+        "seed": 3,
+        "dimensions": 50,
+        "cooktimeWeight": 1.0,
+        "caloriesWeight": 2.0,
+        "expireWeight": 0.5,
+        "normalizeProjection": true
+      }
+    }
+  ]
+}
