@@ -14,14 +14,14 @@ def send_event(client):
   client.create_event(
     event="$set",
     entity_type="user",
-    entity_id="2"
+    entity_id="56ed1fa023c3ce5137a6791e"
   )
 
-  client.create_event(
-    event="$set",
-    entity_type="user",
-    entity_id="1"
-  )
+  # client.create_event(
+  #   event="$set",
+  #   entity_type="user",
+  #   entity_id="1"
+  # )
 
   # client.create_event(
   #   event="$set",
@@ -29,17 +29,96 @@ def send_event(client):
   #   entity_id="u22"
   # )
 
+  client.create_event(
+    event="like",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d2f35242631d04affb"
+  )
 
-  
 
 
-  # client.create_event(
-  #   event="view",
-  #   entity_type="user",
-  #   entity_id="u21",
-  #   target_entity_type="item",
-  #   target_entity_id="i1"
-  # )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d2f35242631d04affb"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d2f35242631d04b02c"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d5f35242631d04b19e"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d6f35242631d04b1f2"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d9f35242631d04b34c"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19d9f35242631d04b366"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19e5f35242631d04b78e"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19f1f35242631d04bbed"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56dc7fe4bb869fd6cf633749"
+  )
+
+  client.create_event(
+    event="view",
+    entity_type="user",
+    entity_id="56ed1fa023c3ce5137a6791e",
+    target_entity_type="item",
+    target_entity_id="56ed19f2f35242631d04bc58"
+  )
 
   # client.create_event(
   #   event="view",
@@ -124,7 +203,7 @@ def send_event(client):
   #   entity_id="u22",
   #   target_entity_type="item",
   #   target_entity_id="i62"
-  # )  
+  # )
 
 
 
@@ -159,8 +238,8 @@ def send_event(client):
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(
     description="Import sample data for e-commerce recommendation engine")
-  parser.add_argument('--access_key', default='LkOTv7EL7rrV93Y5iTUQTvPoM13NbI1L8wbkPsLRKM4mjRn4KeFWBwQSLKTnTN5G')
-  parser.add_argument('--url', default="http://localhost:7070")
+  parser.add_argument('--access_key', default='FKN95k4MIda1bTnoTuHk3tSh8qdwnnhbpC3SGzhqMbrHR7s5eZ7lEP6hNhijQdeN')
+  parser.add_argument('--url', default="http://40.83.122.139:7070")
 
   args = parser.parse_args()
   print args

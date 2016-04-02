@@ -3,7 +3,7 @@ Send sample query to prediction engine
 """
 
 import predictionio
-engine_client = predictionio.EngineClient(url="http://localhost:8000")
+engine_client = predictionio.EngineClient(url="http://52.79.113.154:8000")
 
 print "Sending query..."
 
@@ -11,15 +11,15 @@ print "Sending query..."
 #   print "User: " + str(i)
 #   print engine_client.send_query(
 #     {
-#       "user": "u" + str(i), 
+#       "user": "u" + str(i),
 #       "num": 20
 #       #"blackList" : ["i43"]
 #     }
 #   )
-#   
+#
 print engine_client.send_query(
     {
-      "user": "u19" ,
+      "user": "56ddc16d980eb6f5533fa11c" ,
       "limit": 30,
       "skip": 0
       #"blackList" : ["i43"]
